@@ -72,30 +72,37 @@ vibe-coding-system/
 
 ## 설치 방법
 
-### Claude Code 프로젝트에 설치
+### Claude Code
 
 ```bash
-# 이 리포를 클론
-git clone https://github.com/CryptoMigration/vibe-coding-system.git
+git clone https://github.com/ian6oss/vibe-coding-system.git
 
 # 프로젝트의 .claude/skills/ 에 복사
+mkdir -p your-project/.claude/skills
 cp -r vibe-coding-system/vibe-* your-project/.claude/skills/
 ```
 
-### 또는 직접 다운로드
+### OpenAI Codex (GPT)
 
-`.claude/skills/` 디렉토리에 각 스킬 폴더를 넣으면 됩니다.
+```bash
+git clone https://github.com/ian6oss/vibe-coding-system.git
+
+# AGENTS.md를 프로젝트 루트에 복사
+cp vibe-coding-system/codex/AGENTS.md your-project/AGENTS.md
+```
 
 ## 사용법
 
-Claude Code에서 자연어로 사용:
+자연어로 사용 (Claude Code / Codex 공통):
 
 ```
-"쇼핑몰 만들어줘"        → vibe-planner 자동 가동
-"이 기획서 검토해줘"     → vibe-reviewer 가동
-"개발 시작해줘"          → vibe-dev 가동
-"문서화해줘"             → vibe-docs 가동
-"프로젝트 시작해줘"      → vibe-orchestrator (전체 파이프라인)
+"vcs 시작"               → 전체 파이프라인 시작
+"쇼핑몰 만들어줘"        → 기획부터 시작
+"이 기획서 검토해줘"     → 검수팀 가동
+"개발 시작해줘"          → 개발팀 가동
+"문서화해줘"             → 문서화 시스템 가동
+"vcs 이어가기"           → 이전 세션 이어가기
+"어디까지 했어?"         → 현재 상태 확인
 ```
 
 ### 모드 선택
